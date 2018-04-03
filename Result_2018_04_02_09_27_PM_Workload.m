@@ -54,12 +54,12 @@ waterfilling = [0.1        2.414925        5.484874     10.88605117
     
 figure(1)
 hold on
-plot(waterfilling(:,1),log10(waterfilling(:,2)),'r--','MarkerSize',10,'LineWidth',2);
-plot(carrier(:,1),log10(carrier(:,2)),'k','MarkerSize',10,'LineWidth',2);
-plot(JLW(:,1),log10(JLW(:,2)),'b-.','MarkerSize',10,'LineWidth',2);
+plot(waterfilling(:,1),(waterfilling(:,2)),'r--','MarkerSize',10,'LineWidth',2);
+plot(carrier(:,1),(carrier(:,2)),'k','MarkerSize',10,'LineWidth',2);
+plot(JLW(:,1),(JLW(:,2)),'b-.','MarkerSize',10,'LineWidth',2);
 xlabel('Arrival rate \lambda','FontSize',16)
-ylabel('log_{10}(Avg. Workload)','FontSize',16)
+ylabel('Avg. Workload','FontSize',16)
 grid on
 box on
 legend('WaterFilling, K = 0','Carrier, K = 0','JLW, K = 0')
-axis([0.1 1 0 4])
+axis([0.1 1 0 800])
