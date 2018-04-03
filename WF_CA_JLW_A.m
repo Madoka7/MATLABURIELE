@@ -57,32 +57,32 @@ if(0)%% Delay
     plot(WF(:,1),(WF(:,5)),'r--','MarkerSize',10,'LineWidth',2);
     plot(CA(:,1),(CA(:,5)),'k','MarkerSize',10,'LineWidth',2);
     plot(JLW(:,1),(JLW(:,5)),'b-.','MarkerSize',10,'LineWidth',2);
-    xlabel('Arrival rate \lambda','FontSize',16)
+    xlabel('Power Weight K','FontSize',16)
     ylabel('Avg. Delay','FontSize',16)
     grid on
     box on
-    legend('WaterFilling, K = 240','Carrier, K = 240','JLW, K = 240')
+    legend('WaterFilling','Carrier','JLW')
 elseif(0) %% Power
     figure(1)
     hold on
     plot(WF(:,1),(WF(:,4)),'r--','MarkerSize',10,'LineWidth',2);
     plot(CA(:,1),(CA(:,4)),'k','MarkerSize',10,'LineWidth',2);
     plot(JLW(:,1),(JLW(:,4)),'b-.','MarkerSize',10,'LineWidth',2);
-    xlabel('Arrival rate \lambda','FontSize',16)
+    xlabel('Power Weight K','FontSize',16)
     ylabel('Avg. Power','FontSize',16)
     grid on
     box on
-    legend('WaterFilling, K = 240','Carrier, K = 240','JLW, K = 240')
+    legend('WaterFilling','Carrier','JLW')
 else   %% Workload
     figure(1)
     hold on
     plot(WF(:,1),(WF(:,3)),'r--','MarkerSize',10,'LineWidth',2);
     plot(CA(:,1),(CA(:,3)),'k','MarkerSize',10,'LineWidth',2);
     plot(JLW(:,1),(JLW(:,3)),'b-.','MarkerSize',10,'LineWidth',2);
-    xlabel('Arrival rate \lambda','FontSize',16)
+    xlabel('Power Weight K','FontSize',16)
     ylabel('Avg. Workload','FontSize',16)
     grid on
     box on
-    legend('WaterFilling, K = 240','Carrier, K = 240','JLW, K = 240')
+    legend('WaterFilling','Carrier','JLW')
 end
 
