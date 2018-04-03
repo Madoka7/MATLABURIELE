@@ -55,7 +55,7 @@ CA=[ 0.1	   11.044816	    5.768552	 20.30925958
 0.98	  594.607836	   15.999948	 290.8041803
 0.99	  740.843895	   15.999948	  361.376835];
 
-if(0)%% Delay
+if(1)%% Delay
     figure(1)
     hold on
     plot(WF(:,1),(WF(:,4)),'r--','MarkerSize',10,'LineWidth',2);
@@ -66,7 +66,8 @@ if(0)%% Delay
     grid on
     box on
     legend('WaterFilling, K = 240','Carrier, K = 240','JLW, K = 240')
-elseif(1) %% Power
+    axis([0.1 1 0 3500])
+elseif(0) %% Power
     figure(1)
     hold on
     plot(WF(:,1),(WF(:,3)),'r--','MarkerSize',10,'LineWidth',2);

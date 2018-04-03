@@ -62,7 +62,7 @@ if(0)%% Delay
     grid on
     box on
     legend('WaterFilling','Carrier','JLW')
-elseif(0) %% Power
+elseif(1) %% Power
     figure(1)
     hold on
     plot(WF(:,1),(WF(:,4)),'r--','MarkerSize',10,'LineWidth',2);

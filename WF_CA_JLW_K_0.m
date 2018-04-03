@@ -3,7 +3,7 @@
 %% WHICH SATISFY OUR ASSUMPTION THAT IT SATISFY CAPACITY REGION
 %% STILL DON'T KNOW THE DIFFERENCE BETWEEN IT AND JLW
 
-waterfilling = [0.1        2.414925        5.484874     10.88605117
+WF = [0.1        2.414925        5.484874     10.88605117
          0.2        5.655494        9.625327     12.47050481
          0.3       10.234555       12.468372     14.78640103
          0.4       16.233153       14.247379     17.63687627
@@ -16,7 +16,7 @@ waterfilling = [0.1        2.414925        5.484874     10.88605117
          0.9     1378.332153       15.999936     692.5494262
          0.92	 25034.21842	   15.999982	 12108.12061];
  
-     carrier = [         0.1	   11.098736	    5.821933	 20.26669844
+     CA = [0.1	   11.098736	    5.821933	 20.26669844
          0.2	   26.034528	   10.248518	 22.82128089
          0.3	    36.45513	   13.160672	 24.26317465
          0.4	   44.739757	   14.831597	 26.48014662
@@ -53,7 +53,7 @@ waterfilling = [0.1        2.414925        5.484874     10.88605117
         0.99	 1064.512639	   15.999925	 368.1569622];
 
 
-if(0)%% Delay
+if(1)%% Delay
     figure(1)
     hold on
     plot(WF(:,1),(WF(:,4)),'r--','MarkerSize',10,'LineWidth',2);
@@ -64,8 +64,8 @@ if(0)%% Delay
     grid on
     box on
     legend('WaterFilling, K = 0','Carrier, K = 0','JLW, K = 0')
-    axis([0.1 1 0 900])
-elseif(1) %% Power
+    axis([0.1 1 0 500])
+elseif(0) %% Power
     figure(1)
     hold on
     plot(WF(:,1),(WF(:,3)),'r--','MarkerSize',10,'LineWidth',2);
@@ -79,8 +79,8 @@ elseif(1) %% Power
 else   %% Workload
     figure(1)
     hold on
-    plot(waterfilling(:,1),(waterfilling(:,2)),'r--','MarkerSize',10,'LineWidth',2);
-    plot(carrier(:,1),(carrier(:,2)),'k','MarkerSize',10,'LineWidth',2);
+    plot(WF(:,1),(WF(:,2)),'r--','MarkerSize',10,'LineWidth',2);
+    plot(CA(:,1),(CA(:,2)),'k','MarkerSize',10,'LineWidth',2);
     plot(JLW(:,1),(JLW(:,2)),'b-.','MarkerSize',10,'LineWidth',2);
     xlabel('Arrival rate \lambda','FontSize',16)
     ylabel('Avg. Workload','FontSize',16)
