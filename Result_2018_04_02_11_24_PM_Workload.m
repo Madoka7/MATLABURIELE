@@ -54,9 +54,9 @@ CA=[ 0.1	   11.044816	    5.768552	 20.30925958
 
 figure(1)
 hold on
-plot(WF(:,1),(WF(:,2)),'r--','MarkerSize',10,'LineWidth',2);
-plot(CA(:,1),(CA(:,2)),'k','MarkerSize',10,'LineWidth',2);
-plot(JLW(:,1),(JLW(:,2)),'b-.','MarkerSize',10,'LineWidth',2);
+plot(WF(:,1),(WF(:,2)),'r--','MarkerSize',10,'LineWidth',5);
+plot(CA(:,1),(CA(:,2)),'k','MarkerSize',10,'LineWidth',5);
+plot(JLW(:,1),(JLW(:,2)),'b-.','MarkerSize',10,'LineWidth',5);
 xlabel('Arrival rate \lambda','FontSize',16)
 ylabel('Avg. Workload','FontSize',16)
 grid on
