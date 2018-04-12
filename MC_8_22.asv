@@ -1,0 +1,27 @@
+A=10;
+N=100;
+n=[1:N]';
+r=1;
+r2=0.95;
+r3=1.05;
+s=r.^n;
+wn=normrnd(0,r.^n);
+x=10*ones(N,1)+wn;
+A0=A;
+V0=1;
+Ae=zeros(N,1);
+Kp=zeros(N,1);
+Vp=zeros(N,1);
+K=V0/(V0+s(1));
+Ae(1)=A0+K*(x(1)-A0);
+Vp(1)=(1-K)*V0;
+V0=Vp(1);
+for i = 2:N
+    K=V0/(V0+s(i));
+    Ae(i)=Ae(1)+K*(x(i)-Ae(i-1));
+    Kp(i)=K;
+    Vp(i)=(1-K)*V0;
+    V0=Vp(i);
+end
+subplot(3,1)
+plot(n,Ae);
