@@ -56,7 +56,7 @@ CA=[ 0.1	   11.044816	    5.768552	 20.30925958
 0.99	  740.843895	   15.999948	  361.376835];
 
 if(1)%% Delay
-    figure(1)
+    figure
     hold on
     plot(WF(:,1),(WF(:,4)),'r--','MarkerSize',10,'LineWidth',2);
     plot(CA(:,1),(CA(:,4)),'k','MarkerSize',10,'LineWidth',2);
@@ -65,10 +65,13 @@ if(1)%% Delay
     ylabel('Avg. Delay','FontSize',16)
     grid on
     box on
-    legend('WaterFilling, K = 240','Carrier, K = 240','JLW, K = 240')
+    legend('WF, K = 240','JCAS, K = 240','JLW, K = 240')
     axis([0.1 1 0 3500])
-elseif(0) %% Power
-    figure(1)
+    set(gca,'xtick',[0:0.1:1],'ytick',[0:500:3500])
+    set(gca,'fontsize',16)
+end
+if(1) %% Power
+    figure
     hold on
     plot(WF(:,1),(WF(:,3)),'r--','MarkerSize',10,'LineWidth',2);
     plot(CA(:,1),(CA(:,3)),'k','MarkerSize',10,'LineWidth',2);
@@ -77,9 +80,12 @@ elseif(0) %% Power
     ylabel('Avg. Power','FontSize',16)
     grid on
     box on
-    legend('WaterFilling, K = 240','Carrier, K = 240','JLW, K = 240')
-else   %% Workload
-    figure(1)
+    legend('WF, K = 240','JCAS, K = 240','JLW, K = 240')
+    set(gca,'xtick',[0:0.1:1],'ytick',[0:3:18])
+    set(gca,'fontsize',16)
+end
+if(1)  %% Workload
+    figure
     hold on
     plot(WF(:,1),(WF(:,2)),'r--','MarkerSize',10,'LineWidth',2);
     plot(CA(:,1),(CA(:,2)),'k','MarkerSize',10,'LineWidth',2);
@@ -88,6 +94,8 @@ else   %% Workload
     ylabel('Avg. Workload','FontSize',16)
     grid on
     box on
-    legend('WaterFilling, K = 240','Carrier, K = 240','JLW, K = 240')
+    legend('WF, K = 240','JCAS, K = 240','JLW, K = 240')
     axis([0.1 1 0 4000])
+    set(gca,'xtick',[0:0.1:1],'ytick',[0:800:4000])
+    set(gca,'fontsize',16)
 end
